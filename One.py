@@ -1,11 +1,12 @@
 import tkinter
 
 bomb = tkinter.Tk()
-selection = ["white", "Maroon", "Red", "Orange", "Yellow"]
+selection = ["White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow", "White", "Maroon", "Red", "Orange", "Yellow"]
 select = 0
 sizeX = 50
 sizeY = 50
-count = 5
+count = 20
+Time = 0
 
 # Code
 def updateWindow():
@@ -29,12 +30,14 @@ def end():
 bomb.title("Bomb Threat!")
 bomb.geometry('50x50')
 bomb.configure(bg='white')
-print('5')
-bomb.after(2000, updateWindow)
-bomb.after(4000, updateWindow)
-bomb.after(6000, updateWindow)
-bomb.after(8000, updateWindow)
-bomb.after(10000, end)
+print(count)
+for lole in range(0, count):
+    Time = Time + 2000
+    bomb.after(Time, updateWindow)
+bomb.after(Time, end)
+
 
 # End
 bomb.mainloop()
+
+print("lole")
